@@ -1,0 +1,111 @@
+:root {
+    --bg: #1b1b22;
+    --panel: #24242e;
+    --text: #ECE9E2;
+    --muted: #9A97A6;
+    --accent: #7CE38B;
+    --accent-2: #FF7A59;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5;
+  }
+
+  header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    border-bottom: 2px dashed #3a3a46;
+  }
+
+  header h1 {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-shadow: 3px 3px 0px var(--accent-2);
+  }
+
+  header p {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 1rem;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  .intro {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 40px;
+    font-size: 0.95rem;
+  }
+
+  .game-list {
+    display: grid;
+    gap: 20px;
+  }
+
+  .game-card {
+    background: var(--panel);
+    border: 1px solid #3a3a46;
+    border-left: 5px solid var(--accent);
+    padding: 20px 24px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .game-info h2 {
+    font-size: 1.25rem;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .game-info .genre {
+    color: var(--accent-2);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .game-info p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    max-width: 540px;
+  }
+
+  .rating {
+    background: #1b1b22;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    align-self: center;
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--muted);
+    font-size: 0.8rem;
+    border-top: 2px dashed #3a3a46;
+  }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 2rem; }
+    .game-card { flex-direction: column; }
+  }
